@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://grantkyle:t1fpuilplcwslZ7I@avatar.jmhwa.mongodb.net/Avatar?retryWrites=true&w=majority",
+    "jwtSecret": "secret"
+}
