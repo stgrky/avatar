@@ -24,6 +24,9 @@ const ProfileSchema = mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  profile_picture_url: {
+    type: String,
+  }
 });
 
 module.exports = mongoose.model("profile", ProfileSchema);
