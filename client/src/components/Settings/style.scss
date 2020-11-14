@@ -1,0 +1,100 @@
+// .ps-basic-info-options__title-input {
+//   position: relative;
+//   width: 50%;
+//   min-height: 1px;
+// }
+
+// .ps-basic-info-options__about-input {
+//   position: relative;
+//   width: 50%;
+//   min-height: 1px;
+//   padding-bottom: 20vh;
+// }
+
+.tg-settings-edit__left {
+    min-height: 100%;
+    width: 25%;
+    padding-bottom: 100px;
+  }
+  
+  .tg-settings-edit__right {
+    height: 100%;
+    width: 75%;
+    margin-left: 30px;
+  }
+  
+  .tg-settings-edit__avatar-box {
+    border: 1px solid #eaeaea;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 5px;
+  }
+  
+  .tg-settings-edit__avatar {
+    border: 1px solid #eaeaea;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+  }
+
+  .tg-settings-edit__tab-box {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: right;
+    border-bottom: 1px solid #E6E6E8;
+    padding-bottom: 0px;
+  }
+  .tg-settings-edit__tab{
+    padding-right: 30px;
+    cursor: pointer;
+    padding-bottom: 30px;
+  }
+  
+  .tg-settings-edit__tab:hover{
+    border-bottom: 2px solid #0695FC;
+    margin-right: 30px;
+    padding-bottom: 30px;
+    padding-right: 0px;
+  }
+
+  .tg-settings-edit__tab:active{ 
+    border-bottom: 2px solid #0695FC;
+    margin-right: 30px;
+    padding-bottom: 30px;
+    padding-right: 0px;
+  }
+
+  .tg-settings-edit__active-tab{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    height: auto;
+  }
+  
+  .tg-settings-edit__bottom_nav{
+    margin-right: 30px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .tg-settings-edit__tab--active {
+    color: #0695FC;
+    border-bottom: 2px solid #0695FC;
+    margin-right: 30px;
+    padding-bottom: 30px;
+    cursor: pointer;
+  }
+
+  
+  .tg-settings-edit__tab-title{
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 25px;
+  }

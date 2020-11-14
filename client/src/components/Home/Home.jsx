@@ -4,7 +4,7 @@ import "./style.scss";
 const Home = () => {
   return (
     <Fragment>
-      <div className={"ps-create-edit__tab-title"}>Profile</div>
+      <div className={"tg-settings-edit__tab-title"}>Profile</div>
       <div className={"d-flex"}>
         <div className={"ps-info-tab__left"}>
           <div className={"ps-info-tab__avatar-box"}>

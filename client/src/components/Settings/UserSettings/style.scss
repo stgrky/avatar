@@ -1,0 +1,52 @@
+.tg-user-settings__left {
+  min-height: 100%;
+  width: 25%;
+  padding-bottom: 100px;
+}
+
+.tg-user-settings__right {
+  height: 100%;
+  width: 75%;
+  margin-left: 30px;
+}
+
+.tg-user-settings__container {
+  width: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.tg-user-settings__avatar-box {
+  border: 1px solid #eaeaea;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.tg-user-settings__tab-title{
+  font-size: 16px;
+  font-weight: 400;
+  padding-bottom: 25px;
+}
+
+.tg-user-settings__input{
+    border: 1.5px solid rgba(235, 235, 235, 0.5);
+  background-color: rgba(235, 235, 235, 0.5);
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1.25rem;
+  line-height: 1;
+  background-color: rgba(235, 235, 235, 0.5);
+  background-clip: padding-box;
+  border: 0px solid #E6EAEE;
+  border-radius: 4px;
+  }
+
+  .input-text--primary:focus {
+  border: 1.5px solid #0092fc;
+}

@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import "./style.scss";
@@ -15,17 +14,16 @@ const Navbar = ({ title }) => {
           <li className="pc-navbar__items">
             <Link to="/about">About</Link>
           </li>
+          <li className="pc-navbar__items">
+            <Link to="/settings">Settings</Link>
+          </li>
         </ul>
     </div>
   );
 };
 
-Navbar.propTypes = {
-  title: PropTypes.string.isRequired,
-};
-
 Navbar.defaultProps = {
-  title: "Profile Creator",
+  title: "T-GNAR",
 };
 
 export default Navbar;
