@@ -2,23 +2,27 @@ import React from "react";
 // import BeatLoader from "react-spinners/BeatLoader";
 import axios from "axios";
 
-const SettingsButtonNav = () => {
+const SettingsButtonNav = ({ contact, setContact, onSubmit }) => {
+
+
+
   return (
     <div className={"tg-settings-edit__bottom_nav"}>
       <button
-        className={"btn ps-btn--primary ps-btn--primary-md"}
+        className={"btn btn-light"}
+        onSubmit={onSubmit}
         // onClick={async () => {
-        //   console.log(portfolio);
+        //   console.log(contact);
         //   let result;
         //   try {
-        //     result = await axios.patch(
-        //       "/api/v2/portfolios/" + portfolio.portfolio_id,
-        //       { portfolio: portfolio }
+        //     result = await axios.put(
+        //       "/" + contact.name,
+        //       { contact: contact }
         //     );
         //   } catch (err) {
         //     console.error(err.message);
         //   }
-        //   setPortfolio(result.data);
+        //   // setContact(result.contact);
         // }}
       >
         Save
