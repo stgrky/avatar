@@ -5,16 +5,16 @@ import "./style.scss";
 
 const Navbar = ({ title }) => {
   return (
-    <div className="pc-navbar__container bg-primary">
-      <div className="pc-navbar__title">{title}</div>
-      <ul className="pc-navbar__list">
-          <li className="pc-navbar__items">
+    <div className="tg-navbar__container bg-light">
+      <div className="tg-navbar__title">{title}</div>
+      <ul className="tg-navbar__list">
+          <li className="tg-navbar__items">
             <Link to="/">Home</Link>
           </li>
-          <li className="pc-navbar__items">
+          <li className="tg-navbar__items">
             <Link to="/about">About</Link>
           </li>
-          <li className="pc-navbar__items">
+          <li className="tg-navbar__items">
             <Link to="/settings">Settings</Link>
           </li>
         </ul>

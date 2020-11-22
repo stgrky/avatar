@@ -8,7 +8,7 @@ const SettingsTabs = ({
         <div className={"tg-settings-edit__tab-box"}>
       <div
         className={
-          activeTab === "basic_info"
+          activeTab === "profile_settings"
             ? "tg-settings-edit__tab--active"
             : "tg-settings-edit__tab"
         }
@@ -20,7 +20,7 @@ const SettingsTabs = ({
       </div>
       <div
         className={
-          activeTab === "landing_page"
+          activeTab === "user_settings"
             ? "tg-settings-edit__tab--active"
             : "tg-settings-edit__tab"
         }
