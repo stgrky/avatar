@@ -61,7 +61,7 @@ router.put("/:id", auth, async (req, res) => {
     if (email) profileFields.email = email;
     if (phone) profileFields.phone = phone;
     if (type) profileFields.type = type;
-    if (profile_picture_url) profileFields.type = profile_picture_url;
+    if (profile_picture_url) profileFields.profile_picture_url = profile_picture_url;
   
     try {
       let profile = await Profile.findById(req.params.id);

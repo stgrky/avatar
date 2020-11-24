@@ -17,6 +17,12 @@ const Navbar = ({ title }) => {
           <li className="tg-navbar__items">
             <Link to="/settings">Settings</Link>
           </li>
+          <li className="tg-navbar__items">
+            <Link to="/register">Register</Link>
+          </li>
+          <li className="tg-navbar__items">
+            <Link to="/login">Login</Link>
+          </li>
         </ul>
     </div>
   );

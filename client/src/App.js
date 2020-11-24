@@ -4,7 +4,9 @@ import "./App.scss";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About"
-import Settings from "./components/Settings"
+import Settings from "./components/Settings";
+import Register from "./components/Auth/Register"
+import Login from "./components/Auth/Login"
 
 
 const App = () => {
@@ -17,6 +19,8 @@ const App = () => {
         <Route exact path ="/" component={Home} />
         <Route exact path ="/about" component={About} />
         <Route exact path ="/settings" component={Settings} />
+        <Route exact path ="/register" component={Register} />
+        <Route exact path ="/login" component={Login} />
       </Switch>
     </div>
     </Fragment>
