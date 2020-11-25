@@ -5,8 +5,8 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Settings from "./components/Settings";
-import Register from "./components/Auth/Register";
-import Login from "./components/Auth/Login";
+import Register from "./components/Register";
+import Login from "./components/Login";
 
 import ContactState from "./context/contact/ContactState";
 
