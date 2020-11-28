@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 
+import "./style.scss"
+
 const Register = () => {
   const [user, setUser] = useState({
     name: "",
     email: "",
     password: "",
-    password2: "",
+    password_confirm: "",
   });
 
-  const { name, email, password, password2 } = user;
+  const { name, email, password, password_confirm } = user;
 
   const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.value });
 
@@ -18,48 +20,54 @@ const Register = () => {
   };
 
   return (
-    <div className="tg-form-container">
-      <h1>
-        Account <span className="text-primary">Register</span>
-        <form onSubmit={onSubmit}>
+    <div className="tg-register-form__card-container">
+      <div className="tg-register-form__card">
+      <span className="text-primary"> Account Register</span>
+        <form className="tg-register-form__input-fields" onSubmit={onSubmit}>
           <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input type="text" name="name" value={name} onChange={onChange} />
+       <br/>
+            <input
+              type="text"
+              name="name"
+              value={name}
+              onChange={onChange}
+              placeholder="Name"
+            />
           </div>
           <div className="form-group">
-            <label htmlFor="email">Email Address</label>
             <input
               type="email"
               name="email"
               value={email}
               onChange={onChange}
+              placeholder="Email"
             />
           </div>
           <div className="form-group">
-            <label htmlFor="password">Password</label>
             <input
               type="password"
               name="password"
               value={password}
               onChange={onChange}
+              placeholder="Password"
             />
           </div>
           <div className="form-group">
-            <label htmlFor="password2">Confirm Password</label>
             <input
               type="password"
-              name="password2"
-              value={password2}
+              name="password_confirm"
+              value={password_confirm}
               onChange={onChange}
+              placeholder="Confirm Password"
             />
           </div>
           <input
             type="submit"
             value="Register"
-            className="btn btn-primary btn-block"
+            className="btn btn-primary btn-block tg-register-form__button"
           />
         </form>
-      </h1>
+      </div>
     </div>
   );
 };

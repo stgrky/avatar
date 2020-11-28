@@ -28,14 +28,15 @@
   border-radius: 5px;
 }
 
-.tg-user-settings__tab-title{
+.tg-user-settings__tab-title {
   font-size: 16px;
   font-weight: 400;
   padding-bottom: 25px;
 }
 
-.tg-user-settings__input{
-    border: 1.5px solid rgba(235, 235, 235, 0.5);
+.tg-user-settings__input {
+  font-size: 14px;
+  border: 1.5px solid rgba(235, 235, 235, 0.5);
   background-color: rgba(235, 235, 235, 0.5);
   display: block;
   width: 100%;
@@ -43,10 +44,10 @@
   line-height: 1;
   background-color: rgba(235, 235, 235, 0.5);
   background-clip: padding-box;
-  border: 0px solid #E6EAEE;
+  border: 0px solid #e6eaee;
   border-radius: 4px;
-  }
+}
 
-  .input-text--primary:focus {
+.input-text--primary:focus {
   border: 1.5px solid #0092fc;
 }

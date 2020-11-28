@@ -66,9 +66,9 @@ const UserAvatarUploadPicker = ({
           }}
         ></div>
       )} */}
-      <div className={"tg-user-avatar-upload-picker__upload-button"}>
+      <div className={"tg-user-avatar-upload-picker__upload-button-container"}>
         <button
-          className={"btn btn-light"}
+          className={"tg-user-avatar-upload-picker__upload-button btn btn-light"}
           onClick={(event) => {
             window.cloudinary
               .createUploadWidget(

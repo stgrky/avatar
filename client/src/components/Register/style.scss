@@ -1,0 +1,27 @@
+.tg-register-form__card {
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0 rgba(207,207,207,.5);
+  height: 100%;
+  width: 400px;
+  max-width: 100%;
+  padding: 30px;
+  
+}
+
+.tg-register-form__card-container{
+    font-size: 18px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.tg-register-form__input-fields{
+    font-size: 16px
+}
+
+.tg-register-form__button{
+    max-width: 70%;
+    justify-content: center;
+    display: inline-block
+}

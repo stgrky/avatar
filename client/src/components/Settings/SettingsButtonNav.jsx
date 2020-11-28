@@ -9,7 +9,7 @@ const SettingsButtonNav = ({ contact, setContact, onSubmit }) => {
   return (
     <div className={"tg-settings-edit__bottom_nav"}>
       <button
-        className={"btn btn-light"}
+        className={"tg-settings-edit__save-button btn btn-light"}
         onSubmit={onSubmit}
         // onClick={async () => {
         //   console.log(contact);
