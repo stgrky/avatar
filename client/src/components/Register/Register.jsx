@@ -32,6 +32,7 @@ const Register = () => {
               value={name}
               onChange={onChange}
               placeholder="Name"
+              className="ps-input__primary-form"
             />
           </div>
           <div className="form-group">
@@ -41,6 +42,7 @@ const Register = () => {
               value={email}
               onChange={onChange}
               placeholder="Email"
+              className="ps-input__primary-form"
             />
           </div>
           <div className="form-group">
@@ -50,6 +52,7 @@ const Register = () => {
               value={password}
               onChange={onChange}
               placeholder="Password"
+              className="ps-input__primary-form"
             />
           </div>
           <div className="form-group">
@@ -59,6 +62,7 @@ const Register = () => {
               value={password_confirm}
               onChange={onChange}
               placeholder="Confirm Password"
+              className="ps-input__primary-form"
             />
           </div>
           <input
