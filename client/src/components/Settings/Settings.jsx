@@ -59,7 +59,7 @@ const Settings = ({
     <Fragment>
       <div className="container">
         <div style={{ marginTop: "60px", display: "flex" }}>
-          <h5 className="txt--color-black">Edit Portfolio</h5>
+          <h5 className="txt--color-black">Edit User</h5>
         </div>
         <div className={"ps-card--primary p-0"} style={{ marginTop: "30px" }}>
           <SettingsTabs

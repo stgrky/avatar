@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./style.scss"
 
 const Login = () => {
   const [user, setUser] = useState({
@@ -16,35 +17,38 @@ const Login = () => {
   };
 
   return (
-    <div className="tg-form-container">
-      <h1>
-        Account <span className="text-primary">Login</span>
-        <form onSubmit={onSubmit}>
+    <div className="tg-login__card-container">
+      <div className="tg-login__card">
+        <span className="text-primary"> Account Login</span>
+        <form className="tg-login__input-fields" onSubmit={onSubmit}>
           <div className="form-group">
-            <label htmlFor="email">Email Address</label>
+            <br />
             <input
               type="email"
               name="email"
               value={email}
               onChange={onChange}
+              placeholder="Email"
+              className="tg-login__input"
             />
           </div>
           <div className="form-group">
-            <label htmlFor="password">Password</label>
             <input
               type="password"
               name="password"
               value={password}
               onChange={onChange}
+              placeholder="Password"
+              className="tg-login__input"
             />
           </div>
           <input
             type="submit"
             value="Login"
-            className="btn btn-primary btn-block"
+            className="btn btn-primary btn-block tg-login__button"
           />
         </form>
-      </h1>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./style.scss"
+import "./style.scss";
 
 const Register = () => {
   const [user, setUser] = useState({
@@ -22,17 +22,17 @@ const Register = () => {
   return (
     <div className="tg-register-form__card-container">
       <div className="tg-register-form__card">
-      <span className="text-primary"> Account Register</span>
+        <span className="text-primary"> Account Register</span>
         <form className="tg-register-form__input-fields" onSubmit={onSubmit}>
           <div className="form-group">
-       <br/>
+            <br />
             <input
               type="text"
               name="name"
               value={name}
               onChange={onChange}
               placeholder="Name"
-              className="ps-input__primary-form"
+              className="tg-register-form__input"
             />
           </div>
           <div className="form-group">
@@ -42,7 +42,7 @@ const Register = () => {
               value={email}
               onChange={onChange}
               placeholder="Email"
-              className="ps-input__primary-form"
+              className="tg-register-form__input"
             />
           </div>
           <div className="form-group">
@@ -52,7 +52,7 @@ const Register = () => {
               value={password}
               onChange={onChange}
               placeholder="Password"
-              className="ps-input__primary-form"
+              className="tg-register-form__input"
             />
           </div>
           <div className="form-group">
@@ -62,7 +62,7 @@ const Register = () => {
               value={password_confirm}
               onChange={onChange}
               placeholder="Confirm Password"
-              className="ps-input__primary-form"
+              className="tg-register-form__input"
             />
           </div>
           <input
