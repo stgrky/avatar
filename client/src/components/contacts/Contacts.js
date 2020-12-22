@@ -1,6 +1,6 @@
 import React, { Fragment, useContext } from "react";
 import ContactContext from "../../context/contact/contactContext";
-import ContactItem from "../Contacts/";
+import ContactItem from "../Contacts/ContactItem";
 
 const Contacts = () => {
   const contactContext = useContext(ContactContext);
