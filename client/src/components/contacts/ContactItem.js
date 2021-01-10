@@ -14,7 +14,7 @@ const ContactItem = ({ contact }) => {
   };
 
   return (
-    <div className='card bg-light'>
+    <div className='card bg-light tg-contact-item__card'>
       <h3 className='text-primary text-left'>
         {name}{' '}
         <span

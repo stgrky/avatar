@@ -21,12 +21,15 @@ const ContactFilter = () => {
 
   return (
     <form>
+    <div className="form-group">
       <input
         ref={text}
         type="text"
         placeholder="Find Contact"
         onChange={onChange}
+        className="tg-register-form__input"
       />
+      </div>
     </form>
   );
 };

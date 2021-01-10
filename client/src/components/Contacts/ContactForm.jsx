@@ -47,31 +47,40 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={onSubmit}>
-      <h2 className='text-primary'>
+      <h5 className='txt--color-black tg-contact-form__title'>
         {current ? 'Edit Contact' : 'Add Contact'}
-      </h2>
+      </h5>
+      <div className="form-group">
       <input
         type='text'
         placeholder='Name'
         name='name'
         value={name}
         onChange={onChange}
+        className="tg-register-form__input"
       />
+      </div>
+      <div className="form-group">
       <input
         type='email'
         placeholder='Email'
         name='email'
         value={email}
         onChange={onChange}
+        className="tg-register-form__input"
       />
+      </div>
+      <div className="form-group">
       <input
         type='text'
         placeholder='Phone'
         name='phone'
         value={phone}
         onChange={onChange}
+        className="tg-register-form__input"
       />
-      <h5>Contact Type</h5>
+      </div>
+      <p className="tg-register-form__contact-type-title">Contact Type</p>
       <input
         type='radio'
         name='type'
@@ -79,6 +88,7 @@ const ContactForm = () => {
         checked={type === 'personal'}
         onChange={onChange}
       />{' '}
+      
       Personal{' '}
       <input
         type='radio'
