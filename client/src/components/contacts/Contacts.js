@@ -11,15 +11,15 @@ const Contacts = () => {
     return <h4>Please add a contact</h4>;
   }
 
-  console.log("contact.id", contacts)
+  console.log("contacts", contacts)
 
   return (
     <Fragment>
       {filtered !== null
-        ? filtered.map((contact) => (
+        ? filtered.map(contact => (
             <ContactItem key={contact._id} contact={contact} />
           ))
-        : contacts.map((contact) => (
+        : contacts.map(contact => (
             <ContactItem key={contact._id} contact={contact} />
           ))}
     </Fragment>
