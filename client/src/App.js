@@ -10,9 +10,11 @@ import Login from "./components/Login";
 import ContactsPage from "./components/Contacts/ContactsPage"
 
 import ContactState from "./context/contact/ContactState";
+import AuthState from "./context/auth/AuthState";
 
 const App = () => {
   return (
+    <AuthState>
     <ContactState>
       <Router>
         <Fragment>
@@ -30,6 +32,7 @@ const App = () => {
         </Fragment>
       </Router>
     </ContactState>
+    </AuthState>
   );
 };
 
