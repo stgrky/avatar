@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import {v4 as uuidv4} from "uuid";
+// import {v4 as uuid} from "uuid";
 import ContactContext from "./contactContext";
 import contactReducer from "./contactReducer";
 import {
@@ -11,6 +11,8 @@ import {
   FILTER_CONTACTS,
   CLEAR_FILTER,
 } from "../types";
+
+const uuid = require('uuid')
 
 const ContactState = (props) => {
   const initialState = {
@@ -45,7 +47,7 @@ const ContactState = (props) => {
 
   // Add contact
   const addContact = contact => {
-    contact._id = uuidv4;
+    contact._id = uuid.v4();
     dispatch({ type: ADD_CONTACT, payload: contact })
   }
 

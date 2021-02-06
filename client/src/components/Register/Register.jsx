@@ -1,8 +1,13 @@
-import React, { useState } from "react";
-
+import React, { useState, useContext } from "react";
+import AlertContext from '../../context/alert/alertContext';
 import "./style.scss";
 
+
 const Register = () => {
+  const alertContext = useContext(AlertContext);
+
+  const { setAlert } = alertContext;
+
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -16,6 +21,16 @@ const Register = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    if(name === '' || email === '' || password === ''){
+      setAlert('Fill out all fields!!!', 'danger')
+    } 
+      else if (password !== password_confirm) {
+        setAlert('Passwords do not match', 'danger')
+    } 
+      else {
+        console.log('Register submit')
+        }
+      
     console.log("Register Submit");
   };
 
@@ -33,6 +48,7 @@ const Register = () => {
               onChange={onChange}
               placeholder="Name"
               className="tg-register-form__input"
+              required
             />
           </div>
           <div className="form-group">
@@ -43,6 +59,7 @@ const Register = () => {
               onChange={onChange}
               placeholder="Email"
               className="tg-register-form__input"
+              required
             />
           </div>
           <div className="form-group">
@@ -53,6 +70,8 @@ const Register = () => {
               onChange={onChange}
               placeholder="Password"
               className="tg-register-form__input"
+              required
+              minLength="6"
             />
           </div>
           <div className="form-group">
@@ -63,6 +82,8 @@ const Register = () => {
               onChange={onChange}
               placeholder="Confirm Password"
               className="tg-register-form__input"
+              required
+              minLength="6"
             />
           </div>
           <input
