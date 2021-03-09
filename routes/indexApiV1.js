@@ -5,3 +5,4 @@ const { check, validationResult } = require("express-validator");
 const User = require("../models/User");
 const Profile = require("../models/Profile");
 
+// TODO: Begin MVC(S) architecture

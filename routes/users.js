@@ -32,7 +32,7 @@ router.post(
       let user = await User.findOne({ email });
 
       if (user) {
-        return res.status(400).json({ msg: "User already exists, please use a new email!" });
+        return res.status(400).json({ msg: "User already exists" });
       }
 
       user = new User({
@@ -61,12 +61,12 @@ router.post(
           expiresIn: 360000,
         },
         (err, token) => {
-          if (error) throw error;
+          if (err) throw err;
           res.json({ token });
         }
       );
-    } catch (error) {
-      console.error(error.message);
+    } catch (err) {
+      console.error(err.message);
       res.status(500).send("Server error!!!");
     }
   }
