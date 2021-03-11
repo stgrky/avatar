@@ -1,9 +1,9 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState, useEffect, useContext } from "react";
 import SettingsTabs from "./SettingsTabs.jsx";
 import SettingsButtonNav from "./SettingsButtonNav";
 import AccountSettings from "./AccountSettings";
 import UserSettings from "./UserSettings";
-import axios from "axios";
+import AuthContext from "../../context/auth/authContext";
 
 import "./style.scss";
 
@@ -54,6 +54,13 @@ const Settings = ({
       />
     );
   };
+
+  const authContext = useContext(AuthContext)
+
+  useEffect(()=> {
+    authContext.loadUser();
+    //eslint-disable-next-line
+  }, [])
 
   return (
     <Fragment>

@@ -9,7 +9,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import Alerts from "./components/Alerts/Alerts";
 import ContactsPage from "./components/Contacts/ContactsPage";
-import AuthContext from "./context/auth/authContext";
+import LoggedInRoute from './components/routing/LoggedInRoute'
 
 import ContactState from "./context/contact/ContactState";
 import AuthState from "./context/auth/AuthState";
@@ -35,8 +35,8 @@ const App = () => {
                 <Switch>
                   <Route exact path="/" component={Home} />
                   <Route exact path="/about" component={About} />
-                  <Route exact path="/contacts" component={ContactsPage} />
-                  <Route exact path="/settings" component={Settings} />
+                  <LoggedInRoute exact path="/contacts" component={ContactsPage} />
+                  <LoggedInRoute exact path="/settings" component={Settings} />
                   <Route exact path="/register" component={Register} />
                   <Route exact path="/login" component={Login} />
                 </Switch>
