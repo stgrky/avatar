@@ -7,6 +7,10 @@ import "./style.scss";
 const Navbar = ({ title }) => {
   const authContext = useContext(AuthContext);
 
+  const onLogout = () => {
+    logout();
+  };
+
   const { isAuthenticated, logout, user } = authContext;
   const authLinks = (
     <Fragment>
@@ -18,7 +22,9 @@ const Navbar = ({ title }) => {
         <Link to="/settings">Settings</Link>
       </li>
       <li className="tg-navbar__items">
-        <Link to="/settings">Logout</Link>
+        <Link onClick={onLogout} href="#!">
+          Logout
+        </Link>
       </li>
     </Fragment>
   );
@@ -43,7 +49,7 @@ const Navbar = ({ title }) => {
     <div className="tg-navbar__container bg-light">
       <div className="tg-navbar__title">{title}</div>
       <ul className="tg-navbar__list">
-       {isAuthenticated ? authLinks : guestLinks}
+        {isAuthenticated ? authLinks : guestLinks}
       </ul>
     </div>
   );
