@@ -1,6 +1,7 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, useHistory } from "react";
 import AlertContext from "../../context/alert/alertContext";
 import AuthContext from "../../context/auth/authContext";
+import { Redirect } from "react-router-dom";
 import "./style.scss";
 
 const Register = (props) => {
@@ -16,35 +17,41 @@ const Register = (props) => {
     }
 
     if (error === "User already exists") {
-      setAlert(error, 'danger');
+      setAlert(error, "danger");
       clearErrors();
     }
     // eslint-disable-next-line
   }, [error, isAuthenticated, props.history]);
 
   const [user, setUser] = useState({
-    name: '',
-    email: '',
-    password: '',
-    password_confirm: ''
+    name: "",
+    email: "",
+    password: "",
+    password_confirm: "",
   });
 
   const { name, email, password, password_confirm } = user;
 
-  const onChange = e => setUser({ ...user, [e.target.name]: e.target.value });
+  const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.value });
 
-  const onSubmit = e => {
-    e.preventDefault();
-    if (name === '' || email === '' || password === '') {
-      setAlert('Please enter all fields', 'danger');
-    } else if (password !== password_confirm) {
-      setAlert('Passwords do not match', 'danger');
-    } else {
-      register({
-        name,
-        email,
-        password
-      });
+  const onRegister = (e) => {
+    try {
+      e.preventDefault();
+      if (name === "" || email === "" || password === "") {
+        setAlert("Please enter all fields", "danger");
+      } else if (password !== password_confirm) {
+        setAlert("Passwords do not match", "danger");
+      } else {
+        register({
+          name,
+          email,
+          password,
+        });
+      }
+    } catch (event) {
+      setAlert(
+        "Something went wrong. If it happens again, please contact ggrantyraid@gmail.com"
+      );
     }
   };
 
@@ -52,7 +59,7 @@ const Register = (props) => {
     <div className="tg-register-form__card-container">
       <div className="tg-register-form__card">
         <span className="text-primary"> Account Register</span>
-        <form className="tg-register-form__input-fields" onSubmit={onSubmit}>
+        <form className="tg-register-form__input-fields" onSubmit={onRegister}>
           <div className="form-group">
             <br />
             <input

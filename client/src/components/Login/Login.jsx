@@ -31,7 +31,7 @@ const Login = (props) => {
 
   const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.value });
 
-  const onSubmit = (e) => {
+  const onLogin = (e) => {
     e.preventDefault();
     if (email === "" || password === "") {
       setAlert("Fill in all fields", "danger");
@@ -47,7 +47,7 @@ const Login = (props) => {
     <div className="tg-login__card-container">
       <div className="tg-login__card">
         <span className="text-primary"> Account Login</span>
-        <form className="tg-login__input-fields" onSubmit={onSubmit}>
+        <form className="tg-login__input-fields" onSubmit={onLogin}>
           <div className="form-group">
             <br />
             <input
