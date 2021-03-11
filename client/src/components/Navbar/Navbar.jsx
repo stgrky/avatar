@@ -10,11 +10,32 @@ const Navbar = ({ title }) => {
   const { isAuthenticated, logout, user } = authContext;
   const authLinks = (
     <Fragment>
-      <li>Hello {user && user.name}</li>
-      <li>
-        <a href="#!">
-          <span className="hide-sm">Logout</span>
-        </a>
+      <li>Logged in as {user && user.name}</li>
+      <li className="tg-navbar__items">
+        <Link to="/contacts">Contacts</Link>
+      </li>
+      <li className="tg-navbar__items">
+        <Link to="/settings">Settings</Link>
+      </li>
+      <li className="tg-navbar__items">
+        <Link to="/settings">Logout</Link>
+      </li>
+    </Fragment>
+  );
+
+  const guestLinks = (
+    <Fragment>
+      <li className="tg-navbar__items">
+        <Link to="/">Home</Link>
+      </li>
+      <li className="tg-navbar__items">
+        <Link to="/about">About</Link>
+      </li>
+      <li className="tg-navbar__items">
+        <Link to="/register">Register</Link>
+      </li>
+      <li className="tg-navbar__items">
+        <Link to="/login">Login</Link>
       </li>
     </Fragment>
   );
@@ -22,24 +43,7 @@ const Navbar = ({ title }) => {
     <div className="tg-navbar__container bg-light">
       <div className="tg-navbar__title">{title}</div>
       <ul className="tg-navbar__list">
-        <li className="tg-navbar__items">
-          <Link to="/">Home</Link>
-        </li>
-        <li className="tg-navbar__items">
-          <Link to="/about">About</Link>
-        </li>
-        <li className="tg-navbar__items">
-          <Link to="/contacts">Contacts</Link>
-        </li>
-        <li className="tg-navbar__items">
-          <Link to="/register">Register</Link>
-        </li>
-        <li className="tg-navbar__items">
-          <Link to="/login">Login</Link>
-        </li>
-        <li className="tg-navbar__items">
-          <Link to="/settings">Settings</Link>
-        </li>
+       {isAuthenticated ? authLinks : guestLinks}
       </ul>
     </div>
   );

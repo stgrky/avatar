@@ -6,8 +6,8 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAIL,
   LOGOUT,
-  CLEAR_ERRORS
-} from '../types';
+  CLEAR_ERRORS,
+} from "../types";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (state, action) => {
@@ -17,34 +17,34 @@ export default (state, action) => {
         ...state,
         isAuthenticated: true,
         loading: false,
-        user: action.payload
+        user: action.payload,
       };
     case REGISTER_SUCCESS:
     case LOGIN_SUCCESS:
-      localStorage.setItem('token', action.payload.token);
+      localStorage.setItem("token", action.payload.token);
       return {
         ...state,
         ...action.payload,
         isAuthenticated: true,
-        loading: false
+        loading: false,
       };
     case REGISTER_FAIL:
     case AUTH_ERROR:
     case LOGIN_FAIL:
     case LOGOUT:
-      localStorage.removeItem('token');
+      localStorage.removeItem("token");
       return {
         ...state,
         token: null,
         isAuthenticated: false,
         loading: false,
         user: null,
-        error: action.payload
+        error: action.payload,
       };
     case CLEAR_ERRORS:
       return {
         ...state,
-        error: null
+        error: null,
       };
     default:
       throw Error(`Unhandled type: ${action.type}, ${action.payload}`);
