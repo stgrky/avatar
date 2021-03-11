@@ -1,9 +1,23 @@
-import React from "react";
+import React, { Fragment, useContext } from "react";
 import { Link } from "react-router-dom";
+import AuthContext from "../../context/auth/authContext";
 
 import "./style.scss";
 
 const Navbar = ({ title }) => {
+  const authContext = useContext(AuthContext);
+
+  const { isAuthenticated, logout, user } = authContext;
+  const authLinks = (
+    <Fragment>
+      <li>Hello {user && user.name}</li>
+      <li>
+        <a href="#!">
+          <span className="hide-sm">Logout</span>
+        </a>
+      </li>
+    </Fragment>
+  );
   return (
     <div className="tg-navbar__container bg-light">
       <div className="tg-navbar__title">{title}</div>

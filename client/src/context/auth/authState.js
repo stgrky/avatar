@@ -52,18 +52,18 @@ const AuthState = (props) => {
     };
 
     try {
-      const res = await axios.post("/api/users", formData, config);
+      const res = await axios.post("/api/auth", formData, config);
 
       dispatch({
-        type: REGISTER_SUCCESS,
+        type: LOGIN_SUCCESS,
         payload: res.data,
       });
 
       loadUser();
     } catch (err) {
       dispatch({
-        type: REGISTER_FAIL,
-        // payload: err.response.data.msg,
+        type: LOGIN_FAIL,
+        payload: err.response.data.msg,
       });
     }
   };

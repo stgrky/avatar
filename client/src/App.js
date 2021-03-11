@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.scss";
 import Navbar from "./components/Navbar";
@@ -9,17 +9,20 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import Alerts from "./components/Alerts/Alerts";
 import ContactsPage from "./components/Contacts/ContactsPage";
+import AuthContext from "./context/auth/authContext";
 
 import ContactState from "./context/contact/ContactState";
 import AuthState from "./context/auth/AuthState";
 import AlertState from "./context/alert/AlertState";
 import setAuthToken from "./utils/setAuthToken";
 
-if(localStorage.token) {
+if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
 
 const App = () => {
+
+
   return (
     <AuthState>
       <ContactState>
