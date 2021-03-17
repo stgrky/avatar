@@ -13,7 +13,7 @@ const ContactItem = ({ contact }) => {
     clearCurrent();
   };
 
-  // console.log(contact)
+  console.log(contact._id)
 
   return (
     <div className='card bg-light tg-contact-item__card'>

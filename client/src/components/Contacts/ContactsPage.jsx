@@ -7,8 +7,10 @@ import AuthContext from "../../context/auth/authContext"
 
 import "./style.scss";
 
-const ContactsPage = () => {
+const ContactsPage = ({contact}) => {
   const authContext = useContext(AuthContext)
+
+  console.log("contact", contact)
 
   useEffect(()=> {
     authContext.loadUser();
@@ -21,7 +23,7 @@ const ContactsPage = () => {
       </div>
       <div className="tg-contact-container">
         <ContactFilter />
-        <Contacts />
+        <Contacts contact={contact}/>
       </div>
     </div>
   );

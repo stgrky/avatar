@@ -11,7 +11,7 @@ const Contacts = () => {
     return <h4>Please add a contact</h4>;
   }
 
-  console.log("contacts", contacts)
+  // console.log("contacts", contacts)
 
   return (
     <Fragment>
@@ -20,7 +20,7 @@ const Contacts = () => {
             <ContactItem key={contact._id} contact={contact} />
           ))
         : contacts.map(contact => (
-            <ContactItem key={contact._id} contact={contact} />
+            <ContactItem contact={contact} />
           ))}
     </Fragment>
   );
