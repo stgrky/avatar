@@ -1,5 +1,5 @@
 import React, { Fragment, useContext, useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -12,7 +12,7 @@ import ContactsPage from "./components/Contacts/ContactsPage";
 import LoggedInRoute from './components/routing/LoggedInRoute'
 
 import ContactState from "./context/contact/ContactState";
-import AuthState from "./context/auth/AuthState";
+import AuthState from "./context/auth/authState";
 import AlertState from "./context/alert/AlertState";
 import setAuthToken from "./utils/setAuthToken";
 
@@ -32,14 +32,14 @@ const App = () => {
               <Navbar />
               <div className="App tg-container">
                 <Alerts />
-                <Switch>
+                <Routes>
                   <Route exact path="/" component={Home} />
                   <Route exact path="/about" component={About} />
                   <LoggedInRoute exact path="/contacts" component={ContactsPage} />
                   <LoggedInRoute exact path="/settings" component={Settings} />
                   <Route exact path="/register" component={Register} />
                   <Route exact path="/login" component={Login} />
-                </Switch>
+                </Routes>
               </div>
             </Fragment>
           </Router>

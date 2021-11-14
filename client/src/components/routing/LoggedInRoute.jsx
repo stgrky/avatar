@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route, Navigate } from "react-router-dom";
 import AuthContext from "../../context/auth/authContext";
 
 const LoggedInRoute = ({ component: Component, ...rest }) => {
@@ -12,7 +12,7 @@ const LoggedInRoute = ({ component: Component, ...rest }) => {
       {...rest}
       render={(props) =>
         !isAuthenticated && !loading ? (
-          <Redirect to="/login" />
+          <Navigate to="/login" />
         ) : (
           <Component {...props} />
         )
