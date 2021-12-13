@@ -33,10 +33,10 @@ const App = () => {
               <div className="App tg-container">
                 <Alerts />
                 <Routes>
-                  <Route exact path="/" component={Home} />
+                  <Route exact path="/" element={<Home/>} />
                   <Route exact path="/about" component={About} />
-                  <LoggedInRoute exact path="/contacts" component={ContactsPage} />
-                  <LoggedInRoute exact path="/settings" component={Settings} />
+                  <Route exact path="/contacts" element={<ContactsPage/>} />
+                  <Route exact path="/settings" component={Settings} />
                   <Route exact path="/register" component={Register} />
                   <Route exact path="/login" component={Login} />
                 </Routes>
